@@ -10,6 +10,9 @@ public abstract class Player {
     private String playerMove;
     private ArrayList<String> playerHistory = new ArrayList<>();
 
+    // store list of usernames to keep them unique
+    private ArrayList<String> usernames = new ArrayList<>();
+
     public String getPlayerName() {
         return playerName;
     }
@@ -46,16 +49,7 @@ public abstract class Player {
         return playerHistory;
     }
 
-
     public String generateMove() {
-        int randomNum = (int) Math.floor(Math.random() * 10);
-
-        if (randomNum <= 3) {
-            return "rock";
-        } else if (randomNum > 3 && randomNum <= 6) {
-            return "paper";
-        } else {
-            return "scissors";
-        }
+        return null;
     }
 }

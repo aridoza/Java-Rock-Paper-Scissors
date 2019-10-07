@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01263a4b-8f45-4d68-8678-22772e52f3f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ga/ComputerPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/HumanVersusComputer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/HumanVersusComputer$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/HumanVersusComputer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/HumanVersusComputer$2.class" afterDir="false" />
@@ -11,9 +11,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/HumanVersusComputer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/HumanVersusComputer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/PlayGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/PlayGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Rock Paper Scissors/com/ga/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ga/HumanVersusComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ga/HumanVersusComputer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ga/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ga/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ga/PlayGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ga/PlayGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ga/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ga/Player.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +41,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.ga" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -79,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570390344959</updated>
-      <workItem from="1570390346912" duration="22694000" />
+      <workItem from="1570390346912" duration="30963000" />
     </task>
     <servers />
   </component>

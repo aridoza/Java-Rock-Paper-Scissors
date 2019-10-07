@@ -8,7 +8,7 @@ public class Main {
         // and another method for vs human (2 players)
     HumanVersusComputer newGame = new HumanVersusComputer();
 
-    newGame.playGame();
+    newGame.getGameType();
 
     }
 
