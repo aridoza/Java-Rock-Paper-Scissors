@@ -19,8 +19,10 @@ public abstract class PlayGame {
             // update the player history
             updateHistory(gameMode, firstPlayer, opponent);
 
+            System.out.println("Added to player history: " + firstPlayer.getPlayerHistory());
+
             System.out.println("It's a tie!");
-            resetOrQuit(scanner);
+            resetOrQuitOrHistory(scanner, firstPlayer);
         } else if (firstPlayer.getPlayerMove().equals("rock") && opponent.getPlayerMove().equals("scissors")
                 || firstPlayer.getPlayerMove().equals("paper") && opponent.getPlayerMove().equals("rock")
                 || firstPlayer.getPlayerMove().equals("scissors") && opponent.getPlayerMove().equals("paper")) {
@@ -35,12 +37,12 @@ public abstract class PlayGame {
 
 
             if (firstPlayer.getScore() == 0){
-                firstPlayer.setScore(rightAnswers);
+                firstPlayer.setScore(firstPlayer.getScore() + rightAnswers);
             } else {
                 firstPlayer.setScore((firstPlayer.getScore() + 1));
             }
             System.out.println("You win!");
-            resetOrQuit(scanner);
+            resetOrQuitOrHistory(scanner, firstPlayer);
         } else if (firstPlayer.getPlayerMove().equals("rock") && opponent.getPlayerMove().equals("paper")
                 || firstPlayer.getPlayerMove().equals("paper") && opponent.getPlayerMove().equals("scissors")
                 || firstPlayer.getPlayerMove().equals("scissors") && opponent.getPlayerMove().equals("rock")) {
@@ -60,7 +62,7 @@ public abstract class PlayGame {
                 firstPlayer.setScore((firstPlayer.getScore() + 1));
             }
             System.out.println("You lose.");
-            resetOrQuit(scanner);
+            resetOrQuitOrHistory(scanner, firstPlayer);
 
         } else if (!"rock".equals(firstPlayer.getPlayerMove())
                 || !"paper".equals(firstPlayer.getPlayerMove())
@@ -79,17 +81,17 @@ public abstract class PlayGame {
         public static void updateHistory(String gameMode, Player player1, Player player2) {
             if (gameMode.equals("2 players")) {
                 // update both player's histories
-                player1.getPlayerHistory().add("Game " + Integer.toString(player1.getGamesPlayed()) + ": " + "your move: " + player1.getPlayerMove() + ", opponent move: " + player2.getPlayerMove() + ".");
-                player2.getPlayerHistory().add("Game " + Integer.toString(player2.getGamesPlayed()) + ": " + "your move: " + player2.getPlayerMove() + ", opponent move: " + player1.getPlayerMove() + ".");
+                player1.getPlayerHistory().add("Game " + player1.getGamesPlayed() + ": " + "your move: " + player1.getPlayerMove() + ", opponent move: " + player2.getPlayerMove() + ".");
+                player2.getPlayerHistory().add("Game " + player2.getGamesPlayed() + ": " + "your move: " + player2.getPlayerMove() + ", opponent move: " + player1.getPlayerMove() + ".");
 
             } else if (gameMode.equals("computer")) {
                 // update player1 history
-                player1.getPlayerHistory().add("Game " + Integer.toString(player1.getGamesPlayed()) + ": " + "your move: " + player1.getPlayerMove() + ", opponent move: " + player2.getPlayerMove() + ".");
+                player1.getPlayerHistory().add("Game " + player1.getGamesPlayed() + ": " + "your move: " + player1.getPlayerMove() + ", opponent move: " + player2.getPlayerMove() + ".");
             }
         }
 
-        public void resetOrQuit(Scanner scanner) {
-            System.out.println("Play again? Enter Y, or enter N to quit.");
+        public void resetOrQuitOrHistory(Scanner scanner, Player player) {
+            System.out.println("Play again? Enter Y, or enter N to quit. \nEnter 'history' to see history");
 
             String userInput = scanner.nextLine().toLowerCase();
 
@@ -97,8 +99,11 @@ public abstract class PlayGame {
                 playGame();
             } else if (userInput.equals("n")) {
                 System.exit(0);
+            } else if (userInput.equals("history")) {
+                System.out.println("===GAME HISTORY===");
+                player.getPlayerHistory().forEach(entry -> System.out.println(entry));
             } else {
-                resetOrQuit(scanner);
+                resetOrQuitOrHistory(scanner, player);
             }
 
         }

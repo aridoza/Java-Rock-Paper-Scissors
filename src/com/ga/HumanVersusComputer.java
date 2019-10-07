@@ -7,7 +7,10 @@ public class HumanVersusComputer extends PlayGame{
     @Override
     public String playGame() {
 
+        // track correct answers
         int rightAnswers = 0;
+
+        // track incorrect answers
         int wrongAnswers = 0;
 
         // create a new scanner instance to get player input
@@ -70,7 +73,7 @@ public class HumanVersusComputer extends PlayGame{
 
             // check if player already has a save file: if so get their score
             // if not, initialize it to 0;
-            humanPlayer.setScore(0);
+            //humanPlayer.setScore(0);
 
             // set game up accordingly
             System.out.println("Type 'rock', 'paper', or 'scissors' to play. " +
@@ -78,7 +81,7 @@ public class HumanVersusComputer extends PlayGame{
 
             // store the player's input
             humanPlayer.setPlayerMove(scanner.nextLine().toLowerCase());
-            System.out.println("Human player input: " + humanPlayer.getPlayerMove());
+            //System.out.println("Human player input: " + humanPlayer.getPlayerMove());
 
             // quit the game if player says so
             if (humanPlayer.getPlayerMove().equals("quit")) {
@@ -94,27 +97,8 @@ public class HumanVersusComputer extends PlayGame{
         } else {
             System.out.println("Sorry that mode is not supported.");
             // restart the game
-            playGame();
+            return playGame();
         }
-
-        // set game up accordingly
-        System.out.println("Type 'rock', 'paper', or 'scissors' to play. " +
-                "\nType 'quit' to exit the game.");
-
-        // store the player's input
-        humanPlayer.setPlayerMove(scanner.nextLine().toLowerCase());
-        System.out.println("Human player input: " + humanPlayer.getPlayerMove());
-
-        // quit the game if player says so
-        if (humanPlayer.getPlayerMove().equals("quit")) {
-            System.out.println("Exiting game...");
-            System.exit(0);
-        }
-
-        computer.setPlayerMove(computer.generateMove());
-
-        // compare the player's move to the computer's move
-        return matchResult(humanPlayer, computer, gameMode);
 
     }
 }
